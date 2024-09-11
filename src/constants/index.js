@@ -37,38 +37,7 @@ import {
 } from "../assets";
 
 export const navigation = [
-  {
-    id: "0",
-    title: "Features",
-    url: "#features",
-  },
-  {
-    id: "1",
-    title: "Mision",
-    url: "#Mision",
-  },
-  {
-    id: "2",
-    title: "Help",
-    url: "#Help",
-  },
-  {
-    id: "3",
-    title: "About us",
-    url: "#About us",
-  },
-  {
-    id: "4",
-    title: "New account",
-    url: "#signup",
-    onlyMobile: true,
-  },
-  {
-    id: "5",
-    title: "Sign in",
-    url: "#login",
-    onlyMobile: true,
-  },
+
 ];
 
 export const heroIcons = [homeSmile, file02, searchMd, plusSquare];
@@ -296,31 +265,13 @@ export const benefits = [
 
 export const socials = [
   {
-    id: "0",
-    title: "Discord",
-    iconUrl: discordBlack,
-    url: "#",
-  },
-  {
     id: "1",
-    title: "Twitter",
-    iconUrl: twitter,
-    url: "#",
-  },
-  {
-    id: "2",
     title: "Instagram",
     iconUrl: instagram,
-    url: "#",
+    url: "https://www.instagram.com/yeads_agency?igsh=YWk4Yzh3bzhrZ3Zp ",
   },
   {
     id: "3",
-    title: "Telegram",
-    iconUrl: telegram,
-    url: "#",
-  },
-  {
-    id: "4",
     title: "Facebook",
     iconUrl: facebook,
     url: "#",

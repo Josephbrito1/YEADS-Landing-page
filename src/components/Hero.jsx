@@ -4,13 +4,15 @@ import Section from "./Section";
 import { BackgroundCircles, BottomLine, Gradient } from "./design/Hero";
 import { heroIcons } from "../constants";
 import { ScrollParallax } from "react-just-parallax";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import Generating from "./Generating";
 import Notification from "./Notification";
 import CompanyLogos from "./CompanyLogos";
+import PopUp from "./PopUp"; // Importa el componente PopUp
 
 const Hero = () => {
   const parallaxRef = useRef(null);
+  const [showPopUp, setShowPopUp] = useState(false); // Estado para manejar la visibilidad del pop-up
 
   return (
     <Section
@@ -36,14 +38,18 @@ const Hero = () => {
             </span>
           </h1>
           <p className="body-1 max-w-3xl mx-auto mb-6 text-n-2 lg:mb-8">
-          Como muestra de nuestro agradecimiento por tu interés, 
-          queremos regalarte algo especial. 
-          ¡Haz clic aquí para descubrir tu regalo sorpresa!
+            Como muestra de nuestro agradecimiento por tu interés, 
+            queremos regalarte algo especial. 
+            ¡Haz clic aquí para descubrir tu regalo sorpresa!
           </p>
-          <Button href="https://freelance69.com.co/wp-content/uploads/2022/07/Esto_es_marketing_Seth_Godin.pdf" white>
+
+          {/* Botón para abrir el PopUp */}
+          <Button white onClick={() => setShowPopUp(true)}>
             RECLAMA AQUI
           </Button>
         </div>
+
+        {/* Contenido adicional */}
         <div className="relative max-w-[23rem] mx-auto md:max-w-5xl xl:mb-24">
           <div className="relative z-1 p-0.5 rounded-2xl bg-conic-gradient">
             <div className="relative bg-n-8 rounded-[1rem]">
@@ -96,6 +102,9 @@ const Hero = () => {
 
         <CompanyLogos className="hidden relative z-10 mt-20 lg:block" />
       </div>
+
+      {/* Renderizar el PopUp */}
+      <PopUp show={showPopUp} onClose={() => setShowPopUp(false)} />
 
       <BottomLine />
     </Section>
